@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class ViewController: UIViewController {
 
@@ -30,11 +31,11 @@ class ViewController: UIViewController {
         
         // Data to be added
         let itemData: [String: Any] = [
-            "id": 6,
-            "itemName": "MoguMogu",
-            "price": 39,
-            "quantity": 330,
-            "unit": "ml"
+            "id": 7,
+            "itemName": "Coke",
+            "price": 68,
+            "quantity": 1,
+            "unit": "L"
         // Add more fields as needed
         ]
         
