@@ -10,3 +10,5 @@ import Foundation
 var user = "omg!"
 
 var test = "test"
+
+var test1 = "asdklfj"
