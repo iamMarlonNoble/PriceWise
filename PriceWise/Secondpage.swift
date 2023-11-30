@@ -8,3 +8,5 @@
 import Foundation
 
 var user = "omg!"
+
+var test = "test"
