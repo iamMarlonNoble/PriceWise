@@ -7,13 +7,20 @@
 
 import UIKit
 
+// Import an instance of Cloud Firestore
+import FirebaseCore
+import FirebaseFirestore
+// End initialization
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+       
+        // Start Initialize Firebase
+        FirebaseApp.configure()
+        // End Initialize Firebase
         return true
     }
 

@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+
     var quantity1 = "1000"
     var price1 = "850"
     
