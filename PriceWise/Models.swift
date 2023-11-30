@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Product {
+    var quantity: Double
+    var price: Double
+    var unitOfMeasurement: String
+}

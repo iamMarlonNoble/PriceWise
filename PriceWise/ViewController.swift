@@ -40,13 +40,13 @@ class ViewController: UIViewController {
         ]
         
         // Add a new document to the "users" collection
-        itemsCollection.addDocument(data: itemData) { error in
-            if let error = error {
-                print("Error adding document: \(error)")
-            } else {
-                print("Document added successfully!")
-            }
-        }
+//        itemsCollection.addDocument(data: itemData) { error in
+//            if let error = error {
+//                print("Error adding document: \(error)")
+//            } else {
+//                print("Document added successfully!")
+//            }
+//        }
     }
 
 
