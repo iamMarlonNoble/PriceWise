@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var testOnly = "This is a test only"
 
     override func viewDidLoad() {
         super.viewDidLoad()
