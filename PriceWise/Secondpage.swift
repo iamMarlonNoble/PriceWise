@@ -7,4 +7,4 @@
 
 import Foundation
 
-var user = "omg"
+var user = "omg!"
