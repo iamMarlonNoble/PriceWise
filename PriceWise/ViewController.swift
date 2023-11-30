@@ -6,21 +6,42 @@
 //
 
 import UIKit
+// Import Firestore
+import FirebaseFirestore
 
 class ViewController: UIViewController {
-    
-    var testOnly = "This is a test only"
-    
-    
-    var testOnly2 = "This is a test only"
-    
-    
-    var testOnly3 = "This is a test only"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .systemRed
+        
+        // Firestore
+        // Add a new document with a generated ID
+        
+        // Access Firestore
+        let db = Firestore.firestore()
+        // Reference to the "items" collection
+        let itemsCollection = db.collection("items")
+        
+        // Data to be added
+        let itemData: [String: Any] = [
+            "id": 5,
+            "itemName": "Yakult",
+            "price": 12,
+            "quantity": 60,
+            "unit": "ml"
+        // Add more fields as needed
+        ]
+        
+        // Add a new document to the "users" collection
+        itemsCollection.addDocument(data: itemData) { error in
+            if let error = error {
+                print("Error adding document: \(error)")
+            } else {
+                print("Document added successfully!")
+            }
+        }
     }
 
 
