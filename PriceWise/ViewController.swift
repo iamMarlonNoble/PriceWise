@@ -9,13 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var testOnly = "This is a test only"
+    var quantity1 = "1000"
+    var price1 = "850"
     
-    
-    var testOnly2 = "This is a test only"
-    
-    
-    var testOnly3 = "This is a test only"
+    var quantity2 = "100"
+    var price2 = "100"
 
     override func viewDidLoad() {
         super.viewDidLoad()
