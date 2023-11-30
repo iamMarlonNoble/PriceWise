@@ -11,6 +11,7 @@ import FirebaseFirestore
 class ViewController: UIViewController {
     
     var test = ""
+    var test2 = "jaycommit"
 
     override func viewDidLoad() {
         super.viewDidLoad()
