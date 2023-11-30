@@ -9,6 +9,8 @@ import UIKit
 import FirebaseFirestore
 
 class ViewController: UIViewController {
+    
+    var test = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
