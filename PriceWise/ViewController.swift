@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     
     
     var testOnly2 = "This is a test only"
+    
+    
+    var testOnly3 = "This is a test only"
 
     override func viewDidLoad() {
         super.viewDidLoad()
