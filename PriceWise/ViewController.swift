@@ -9,8 +9,6 @@ import UIKit
 import FirebaseFirestore
 
 class ViewController: UIViewController {
-    
-    var test = "testing lang"
 
     override func viewDidLoad() {
         super.viewDidLoad()
