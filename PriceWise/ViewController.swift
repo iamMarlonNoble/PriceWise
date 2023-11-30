@@ -10,6 +10,7 @@ import FirebaseFirestore
 
 class ViewController: UIViewController {
     
+    var test = "testing lang"
     var test = ""
     var test2 = "jaycommit"
 
