@@ -9,12 +9,8 @@ import UIKit
 import FirebaseFirestore
 
 class ViewController: UIViewController {
-
-    var quantity1 = "1000"
-    var price1 = "850"
     
-    var quantity2 = "100"
-    var price2 = "100"
+    var test = "testing lang"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,23 +26,23 @@ class ViewController: UIViewController {
         let itemsCollection = db.collection("items")
         
         // Data to be added
-        let itemData: [String: Any] = [
-            "id": 8,
-            "itemName": "Toothpaste",
-            "price": 100,
-            "quantity": 50,
-            "unit": "g"
+//        let itemData: [String: Any] = [
+//            "id": 8,
+//            "itemName": "Toothpaste",
+//            "price": 100,
+//            "quantity": 50,
+//            "unit": "g"
         // Add more fields as needed
-        ]
+//        ]
         
         // Add a new document to the "users" collection
-        itemsCollection.addDocument(data: itemData) { error in
-            if let error = error {
-                print("Error adding document: \(error)")
-            } else {
-                print("Document added successfully!")
-            }
-        }
+//        itemsCollection.addDocument(data: itemData) { error in
+//            if let error = error {
+//                print("Error adding document: \(error)")
+//            } else {
+//                print("Document added successfully!")
+//            }
+//        }
     }
 
 
