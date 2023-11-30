@@ -31,11 +31,11 @@ class ViewController: UIViewController {
         
         // Data to be added
         let itemData: [String: Any] = [
-            "id": 7,
-            "itemName": "Coke",
-            "price": 68,
-            "quantity": 1,
-            "unit": "L"
+            "id": 8,
+            "itemName": "Toothpaste",
+            "price": 100,
+            "quantity": 50,
+            "unit": "g"
         // Add more fields as needed
         ]
         
