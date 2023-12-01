@@ -41,8 +41,17 @@ class ViewController: UIViewController {
 //                print("Document added successfully!")
 //            }
 //        }
+        pushVC()
     }
-
+    
+    func pushVC() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            let priceWiseVCStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let priceWiseVC = priceWiseVCStoryboard.instantiateViewController(withIdentifier: "PriceWiseVC") as! PriceWiseVC
+            self.navigationController?.pushViewController(priceWiseVC, animated: true)
+            print("vc pushed")
+        }
+    }
 
 }
 

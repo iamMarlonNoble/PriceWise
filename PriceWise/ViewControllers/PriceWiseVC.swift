@@ -30,6 +30,9 @@ class PriceWiseVC: UIViewController, UIPopoverPresentationControllerDelegate, Un
         viewModel = ProductComparisonViewModel(product1: product1, product2: product2)
         unitPickerView = UnitPickerView()
         unitPickerView?.unitDelegate = self
+        
+        self.navigationItem.hidesBackButton = true
+        setNeedsStatusBarAppearanceUpdate()
         //        setupUnitPicker()
     }
     

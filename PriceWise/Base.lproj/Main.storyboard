@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w3R-RQ-Deg">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
@@ -55,15 +55,16 @@
                             <constraint firstItem="CqC-N7-0bo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fmZ-hM-YrX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="5Ej-Vr-Co6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1491" y="-680"/>
+            <point key="canvasLocation" x="-565.64885496183206" y="-680.28169014084506"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="u2T-6g-rz7">
             <objects>
-                <viewController id="Yre-no-iGK" userLabel="Main View Controller" customClass="PriceWiseVC" customModule="PriceWise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PriceWiseVC" id="Yre-no-iGK" userLabel="Main View Controller" customClass="PriceWiseVC" customModule="PriceWise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ifH-JY-Ptg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3g-Ri-Ano" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-457.25190839694653" y="-680.28169014084506"/>
+            <point key="canvasLocation" x="469.46564885496178" y="-680.28169014084506"/>
         </scene>
         <!--MasterList View Controller-->
         <scene sceneID="97U-6l-IP5">
@@ -247,7 +248,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvS-C8-DJo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="261.83206106870227" y="-680.28169014084506"/>
+            <point key="canvasLocation" x="1188.5496183206105" y="-680.28169014084506"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X3K-HZ-fFy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w3R-RQ-Deg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="buE-wX-iS9">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="AYf-EI-TCm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vnA-j7-Iw9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1492.3664122137404" y="-680.28169014084506"/>
         </scene>
     </scenes>
     <resources>
