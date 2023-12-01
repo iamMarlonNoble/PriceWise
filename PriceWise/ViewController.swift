@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = .systemRed
+       // view.backgroundColor = .systemRed
         
         // Firestore
         // Add a new document with a generated ID
