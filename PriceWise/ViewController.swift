@@ -19,10 +19,10 @@ class ViewController: UIViewController {
         // Add a new document with a generated ID
         
         // Access Firestore
-        let db = Firestore.firestore()
-        // Reference to the "items" collection
-        let itemsCollection = db.collection("items")
-        
+//        let db = Firestore.firestore()
+//        // Reference to the "items" collection
+//        let itemsCollection = db.collection("items")
+//        
         // Data to be added
 //        let itemData: [String: Any] = [
 //            "id": 8,
