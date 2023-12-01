@@ -8,7 +8,7 @@
 import Foundation
 
 struct Product {
-    var quantity: Double
-    var price: Double
+    var quantity: String
+    var price: String
     var unitOfMeasurement: String
 }
