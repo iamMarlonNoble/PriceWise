@@ -113,6 +113,9 @@
                                                                 <rect key="frame" x="218" y="8" width="75" height="34.333333333333336"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="unit1btnTapped:" destination="Yre-no-iGK" eventType="touchUpInside" id="ldf-5M-bXq"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -152,6 +155,9 @@
                                                                 <rect key="frame" x="218" y="8" width="75" height="34.333333333333336"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="unit2btnTapped:" destination="Yre-no-iGK" eventType="touchUpInside" id="NS0-mq-R0j"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -176,6 +182,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="testBtn:" destination="Yre-no-iGK" eventType="touchUpInside" id="Qrn-Yg-pWd"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="KDJ-yZ-Q8R">
                                         <rect key="frame" x="0.0" y="555" width="293" height="114"/>
@@ -217,6 +226,14 @@
                             <constraint firstItem="GBX-2h-TOe" firstAttribute="top" secondItem="ifH-JY-Ptg" secondAttribute="top" id="ubv-n9-cfd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="price1TF" destination="xyb-2y-j6f" id="v9F-NC-J7f"/>
+                        <outlet property="price2TF" destination="dYf-ct-iji" id="Nlt-sg-hek"/>
+                        <outlet property="product1UnitButton" destination="1Ez-Eb-Ila" id="9SU-Ad-cYZ"/>
+                        <outlet property="product2UnitButton" destination="W4i-bd-Fhx" id="y5c-CP-vjG"/>
+                        <outlet property="quantity1TF" destination="1HZ-i3-jvF" id="vqZ-XE-rou"/>
+                        <outlet property="quantity2TF" destination="2yn-va-fYe" id="hsx-NR-sRS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3g-Ri-Ano" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

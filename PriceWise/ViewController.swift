@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     }
     
     func pushVC() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) {
             let priceWiseVCStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let priceWiseVC = priceWiseVCStoryboard.instantiateViewController(withIdentifier: "PriceWiseVC") as! PriceWiseVC
             self.navigationController?.pushViewController(priceWiseVC, animated: true)
