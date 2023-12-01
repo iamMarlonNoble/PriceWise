@@ -61,6 +61,10 @@ class ProductComparisonViewModel {
         }
     }
     
+    func checkUnits() {
+        
+    }
+    
     func calculateAmountWillSave() -> String {
         let highestQuantity = Double(quantities.max() ?? 0)
         let lowestQuantity = Double(quantities.min() ?? 0)

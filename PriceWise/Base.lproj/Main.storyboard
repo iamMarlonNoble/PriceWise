@@ -84,6 +84,9 @@
                                         <buttonConfiguration key="configuration" style="filled" image="magnifyingglass.circle.fill" catalog="system" title="Search Item">
                                             <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapSearchItem:" destination="Yre-no-iGK" eventType="touchUpInside" id="NVF-kV-khZ"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eUC-sm-6es">
                                         <rect key="frame" x="0.0" y="84.333333333333343" width="293" height="340.66666666666663"/>
@@ -111,6 +114,9 @@
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ez-Eb-Ila">
                                                                 <rect key="frame" x="218" y="8" width="75" height="34.333333333333336"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="75" id="B6C-Sh-Utp"/>
+                                                                </constraints>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="gray" title="Button"/>
                                                                 <connections>
@@ -153,6 +159,9 @@
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4i-bd-Fhx">
                                                                 <rect key="frame" x="218" y="8" width="75" height="34.333333333333336"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="75" id="pT2-vy-Dpq"/>
+                                                                </constraints>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="gray" title="Button"/>
                                                                 <connections>
@@ -242,7 +251,7 @@
         <!--MasterList View Controller-->
         <scene sceneID="97U-6l-IP5">
             <objects>
-                <viewController id="If4-ca-eAW" userLabel="MasterList View Controller" customClass="MasterListVC" customModule="PriceWise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="masterList" id="If4-ca-eAW" userLabel="MasterList View Controller" customClass="MasterListVC" customModule="PriceWise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CqP-Gg-64t">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,6 +259,21 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="BackGround__iOS_newOrangeYellow" translatesAutoresizingMaskIntoConstraints="NO" id="Dnv-1I-Ak8">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rbH-6p-KeX">
+                                <rect key="frame" x="76" y="59" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="YourCellIdentifier" id="9MV-Gc-Vk0">
+                                        <rect key="frame" x="0.0" y="50" width="240" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9MV-Gc-Vk0" id="eo6-Xp-YmQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="a0H-LY-zYi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -262,6 +286,9 @@
                             <constraint firstItem="Dnv-1I-Ak8" firstAttribute="top" secondItem="a0H-LY-zYi" secondAttribute="top" id="yw0-EI-VP0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="rbH-6p-KeX" id="WuC-yg-sJ8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvS-C8-DJo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

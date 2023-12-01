@@ -21,6 +21,9 @@ class PriceWiseVC: UIViewController, UIPopoverPresentationControllerDelegate, Un
     var unitPickerView: UnitPickerView?
     var selectedProductIndex: Int = 0
     
+    var unit1 = ""
+    var unit2 = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,10 +42,10 @@ class PriceWiseVC: UIViewController, UIPopoverPresentationControllerDelegate, Un
     func didTapButton() {
         viewModel.product1.price = price1TF.text ?? ""
         viewModel.product1.quantity = quantity1TF.text ?? ""
-        //        viewModel.product1.unitOfMeasurement = unit1
+        viewModel.product1.unitOfMeasurement = unit1
         viewModel.product2.price = price2TF.text ?? ""
         viewModel.product2.quantity = quantity2TF.text ?? ""
-        //        viewModel.product1.unitOfMeasurement = unit2
+        viewModel.product1.unitOfMeasurement = unit2
         
         let fieldChecker = viewModel.itemChecker()
         if fieldChecker == false {
@@ -78,11 +81,11 @@ class PriceWiseVC: UIViewController, UIPopoverPresentationControllerDelegate, Un
         
         if selectedProductIndex == 0 {
             product1UnitButton.setTitle(selectedUnit, for: .normal)
-            print("Selected unit for product 1: \(selectedUnit)")
+            unit1 = selectedUnit
             // Perform further actions based on the selected unit for product 1
         } else {
             product2UnitButton.setTitle(selectedUnit, for: .normal)
-            print("Selected unit for product 2: \(selectedUnit)")
+            unit2 = selectedUnit
             // Perform further actions based on the selected unit for product 2
         }
         
@@ -113,48 +116,10 @@ class PriceWiseVC: UIViewController, UIPopoverPresentationControllerDelegate, Un
         
         present(popoverContentController, animated: true, completion: nil)
     }
+    @IBAction func didTapSearchItem(_ sender: UIButton) {
+        let masterListVCStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let pmasterListVC = masterListVCStoryboard.instantiateViewController(withIdentifier: "masterList") as! MasterListVC
+        self.navigationController?.pushViewController(pmasterListVC, animated: true)
+        print("vc pushed")
+    }
 }
-    
-//    func showUnitPicker() {
-//        guard let picker = unitPicker else { return }
-//        
-//        let alertController = UIAlertController(title: "Select Unit", message: nil, preferredStyle: .actionSheet)
-//        alertController.view.addSubview(picker)
-//        
-//        let height: NSLayoutConstraint = NSLayoutConstraint(item: alertController.view ?? UIView(), attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 216)
-//        alertController.view.addConstraint(height)
-//        
-//        let selectAction = UIAlertAction(title: "Done", style: .default, handler: nil)
-//        alertController.addAction(selectAction)
-//        
-//        present(alertController, animated: true, completion: nil)
-//    }
-    
-//    func setupUnitPicker() {
-//        unitPickerView = UIPickerView()
-//        unitPickerView?.delegate = self
-//        unitPickerView?.dataSource = self
-//        }
-
-//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-//        return 1
-//    }
-//    
-//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-//        return units.count
-//    }
-//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        return units[row]
-//    }
-//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-////        let selectedUnit = units[row]
-////        viewModel.updateUnit(for: &activeProduct!, with: selectedUnit)
-//        guard let selectedProduct = selectedProduct else {
-//            return
-//        }
-//        if selectedProduct == viewModel.product1 {
-//            
-//        }
-
-    
-
